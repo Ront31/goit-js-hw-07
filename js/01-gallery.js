@@ -1,6 +1,5 @@
 import { galleryItems } from "./gallery-items.js";
 // Change code below this line
-
 console.log(galleryItems);
 
 const divGalleryEl = document.querySelector(".gallery");
@@ -30,5 +29,10 @@ function createGallery(arg) {
 
 function onGalleryImgClick(e) {
   e.preventDefault();
-  console.log(e.target.getAttribute("data-source"));
+  const selectedImage = e.target.getAttribute("data-source");
+
+  const instance = basicLightbox.create(
+    `<img src="${selectedImage}" width="800" height="1600">`
+  );
+  instance.show();
 }
