@@ -21,16 +21,6 @@ function createGallery(arg) {
     .join("");
 }
 
-// function onGalleryImgClick(e) {
-//   e.preventDefault();
-//   const selectedImage = e.target.getAttribute("data-source");
-
-//   const instance = basicLightbox.create(
-//     `<img src="${selectedImage}" width="800" height="1600">`
-//   );
-//   instance.show();
-// }
-
 new SimpleLightbox(".gallery a", {
   captionDelay: 250,
   captionsData: "alt",

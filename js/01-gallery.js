@@ -29,6 +29,11 @@ function createGallery(arg) {
 
 function onGalleryImgClick(e) {
   e.preventDefault();
+  console.log(e.target.nodeName);
+  if (e.target.nodeName !== "IMG") {
+    return;
+  }
+
   const selectedImage = e.target.getAttribute("data-source");
 
   const instance = basicLightbox.create(
